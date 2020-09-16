@@ -1,5 +1,6 @@
 import React from 'react';
 
+//class 형 Input 컴포넌트
 // class Input extends React.Component {
 // render(){
 //     return(
@@ -11,6 +12,7 @@ import React from 'react';
 // }
 // }
 
+//함수형 Input 컴포넌트
 const Input = React.memo(({Name,Placeholder,Value,OnChange }) => {
     return(
         <>

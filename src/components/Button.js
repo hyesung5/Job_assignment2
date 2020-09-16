@@ -1,8 +1,7 @@
 import React from 'react';
 
+//class 형 Button 컴포넌트
 // class Button extends React.Component {
-
-
 //   render() {
 //     return (
 //       <>
@@ -15,13 +14,13 @@ import React from 'react';
 //   }
 // }
 
-
+//함수형 Button 컴포넌트
 const Button =(({Text, FontColor, Info_id, OnClick})=>{
   const handleRemove =(id) => {
    
     OnClick(id)
   }
-  
+
 if(Text === "등록") return <button>{Text}</button>;
 else return<button style={{color:FontColor}} onClick={() => handleRemove(Info_id)} >{Text}</button>;
 
