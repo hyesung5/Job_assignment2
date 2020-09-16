@@ -2,6 +2,7 @@ import React, {useRef, useCallback, useState} from 'react';
 import produce from 'immer';
 import Button from "./components/Button";
 import Text from "./components/Text";
+import Input from "./components/Input";
 
 const App = () => {
   const nextId = useRef(1);
@@ -68,11 +69,11 @@ const App = () => {
             TextTitle={"제목"}
             TextColor={"blue"}
           />
-          <input
-            name="title"
-            placeholder="제목"
-            value={form.title}
-            onChange={onChange}
+          <Input 
+          Name={"title"}
+          Placeholder={"제목"}
+          Value={form.title}
+          OnChange={onChange}
           />
         </div>
         <div>
@@ -80,11 +81,11 @@ const App = () => {
             TextTitle={"내용"}
             TextColor={"red"}
           />
-          <input
-            name="content"
-            placeholder="내용"
-            value={form.content}
-            onChange={onChange}
+          <Input 
+          Name={"content"}
+          Placeholder={"내용"}
+          Value={form.content}
+          OnChange={onChange}
           />
         </div>
         <Button Text={"등록"}/>
