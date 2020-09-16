@@ -95,7 +95,7 @@ const App = () => {
           {data.array.map(info => (
             <li key={info.id}>
               {info.title}({info.content})
-              <Button Text={"삭제"} FontColor={"blue"} info_id={info.id} onClick={onRemove}/>
+              <Button Text={"삭제"} FontColor={"blue"} Info_id={info.id} OnClick={onRemove}/>
 
             </li>
           ))}
