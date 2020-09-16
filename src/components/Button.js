@@ -16,13 +16,14 @@ import React from 'react';
 // }
 
 
-const Button =React.memo(({Text, FontColor, Info_id, OnClick})=>{
-  return(
-<>
-{Text === "등록" ? <button>{Text}</button>: <button style={{color:FontColor}} onClick={()=>OnClick(Info_id)} >{Text}</button>}
-
-</>
-  )
+const Button =(({Text, FontColor, Info_id, OnClick})=>{
+  const handleRemove =(id) => {
+   
+    OnClick(id)
+  }
+  
+if(Text === "등록") return <button>{Text}</button>;
+else return<button style={{color:FontColor}} onClick={() => handleRemove(Info_id)} >{Text}</button>;
 
 })
 
